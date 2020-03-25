@@ -4,60 +4,74 @@
   <meta charset="utf-8">
   <title>Registration From</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css=main.css" rel="stylesheet">
+  <link href="css/modules.css" rel="stylesheet">
+  <link href="css/grid.css" rel="stylesheet">
+  <link href="css/type.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>Want to go to Mars?</h1>
+  <section>
+    <div class="unit xs-1 s-1 m-1 l-1 xl-1 max-length pad-t-2 gutter-1-2 island-2">
+    <h1 class="peta push-none">Want to go to Mars?</h1>
+
+    <div class="unit xs-1 s-1 m-1 l-1 xl-1">
     <p>We’re looking for super-awesome human beings who want to make the long trek to Mars for the adventure of a lifetime.</p>
+    </div>
 
-    <form action="https://formspree.io/sinc0134@algonquinlive.com" method="post">
-
-      <h2>Personal Details</h2>
-      <div>
+    <form action="https://formspree.io/" method="POST" class="max-length">
+      <fieldset class="mega unit xs">
+      <legend><em>Personal details</em></legend>
+      <div class="grid">
+        <div class="move-right unit xs-1 l-1-2 pad-t-1-2 pad-b-1-8">
         <label for="name">Name</label>
         <input id="name" name="name" required>
       </div>
 
-      <div>
+      <div class="move-right unit xs-1 l-1-2 pad-t-1-2 pad-b-1-8">
         <label for="age">Age</label>
         <input id="age" name="age" required>
       </div>
 
-      <div>
+      <div class="move-right unit xs-1 l-1-2 pad-t-1-2 pad-b-1-8">
         <label for="email">Email</label>
         <input id="email" name="email" required>
       </div>
 
-      <div>
-        <label for="Physical fitness">Physical fitness</label>
-        <select id="Physical fitness" name="Physical fitness">
+      <div class="move-right unit xs-1 l-1-2 pad-t-1-2 pad-b-1-8">
+        <label for="physical-fitness">Physical fitness</label>
+        <select id="physical-fitness" name="physical-fitness">
           <option>Super-human</option>
           <option>Fit as a fiddle</option>
           <option>Not terribly strong</option>
           <option>A little couch-potato-y</option>
         </select>
       </div>
+      </div>
+</fieldset>
 
-      <div>
-        <label for="adress">Address</label>
+      <div class="move-right unit xs-1 l-1-2 pad-t-1-2 pad-b-1-8">
+        <label for="address">Address</label>
         <textarea id="address" name="address" required></textarea>
       </div>
 
-      <h2>Mission Statement</h2>
+      <fieldset class="push-none">
+        <legend><em>Mission statement</em></legend>
 
-      <div>
-          <label for="mission statement">Why do you want to go to Mars?</label>
-          <textarea id="mission statement" name="mission statement" required></textarea>
+      <div class="move-right unit xs-1 l-1-2 pad-t-1-2 pad-b-1-8">
+          <label for="message">Why do you want to go to Mars?</label>
+          <textarea id="message" name="message" required></textarea>
       </div>
+      </fieldset>
 
-      <div>
-        <button type="submit">Register for the trip!</button>
+      <div class="pad-t gutter-2">
+        <button class="btn" type="submit">Register for the trip!</button>
+        <input type="hidden" name="_subject" value="Request to join the mission">
       </div>
-
-
 
   </form>
-
+  </div>
+  </section>
 </body>
 </html>
